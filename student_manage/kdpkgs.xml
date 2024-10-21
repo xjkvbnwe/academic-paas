@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kdpkgs isv="ozwe">
+    <format ver="1.1"/>
+    <description>
+        <time>2023-07-11 14:39:40</time>
+        <content/>
+    </description>
+    
+    <product name="cosmic_cus_ozwe" nameCN="金蝶云苍穹(二开)" ver="5.0.001">
+        <app>
+            <name>ozwe_studentmanage</name>
+            <ver>5.0.001</ver>
+            <appids>ozwe_studentmanage</appids>
+            <dependon/>
+            <resource>0429d4404b</resource>
+        </app>
+    </product>
+    <kdpkg>
+        <ID>0429d4404b</ID>
+        <md5>e559a782523f59bffef6e7e385e97b3a</md5>
+        <secret>8095bace1a8fadb7a29e05f1c9648365136441d6bce995a10a3c23fb73e33fa5</secret>
+        <name>ozwe_studentsystem-ozwe_studentmanage-dm.zip</name>
+        <type>dm</type>
+        <sourcePath>dm/</sourcePath>
+    </kdpkg>
+    <staticResource ver="5.0.001">
+        <resource/>
+    </staticResource>
+</kdpkgs>

@@ -1,0 +1,10 @@
+<root>
+ <region name="ozwe_StudentSystem">
+    <queue name="queue_select" appid="ozwe_workmanage">
+        <consumer class="top.dream.rabbitmq.MQSelectCourse"></consumer>
+    </queue>
+    <queue name="queue_quit" appid="ozwe_workmanage">
+        <consumer class="top.dream.rabbitmq.MQQuitCourse"></consumer>
+    </queue>
+ </region>
+</root>

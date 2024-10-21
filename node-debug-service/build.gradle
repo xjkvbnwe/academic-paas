@@ -1,0 +1,35 @@
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	
+	sourceCompatibility=1.8
+	group = 'kd.bos.service'
+	version = '1.0'
+		tasks.withType(JavaCompile) {  
+		options.encoding = "UTF-8" 
+	} 
+	
+	def trd= '/home/kduser/cosmic/mservice-cosmic/lib/trd'
+	def bos= '/home/kduser/cosmic/mservice-cosmic/lib/bos'
+	def biz= '/home/kduser/cosmic/mservice-cosmic/lib/biz'
+        def cus= '/home/kduser/cosmic/mservice-cosmic/lib/cus'
+	
+	dependencies {
+	    implementation fileTree(dir: bos, include: '*.jar')
+	    implementation fileTree(dir: trd, include: '*.jar', exclude:['kylin-jdbc-3.1.0*.jar'])
+	    implementation fileTree(dir: biz, include: '*.jar')
+            implementation fileTree(dir: cus, include: '*.jar')
+	} 
+	
+	task sourcesJar(type: Jar, dependsOn: build) {
+	    classifier = 'sources'
+	    from sourceSets.main.allSource
+	 }
+	 
+		
+	 task copyJarTodir(type: Copy){
+		    from 'build/libs'
+			into '/home/local/bos'
+			exclude '**/*.class'
+	 }
+	test.ignoreFailures true
+	
